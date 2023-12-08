@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: DodgerBlue;
+  justify-content: center;
+
+}
+
+.div1 {
+  background-color: gray;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+.divgrande{
+  background-color: green;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+.divborrar{
+  background-color: red;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+
+</style>
+</head>
+<body>
+<h1 id="telefono">teféleno</h1>
+
+<div class="flex-container">
+  <button onclick="guarda(1)" class="div1">1</button>
+  <button onclick="guarda(2)" class="div1">2</button>
+  <button onclick="guarda(3)" class="div1">3</button>  
+  <button onclick="guarda(4)" class="div1">4</button>
+  <button onclick="guarda(5)" class="div1">5</button>
+  <button onclick="guarda(6)" class="div1">6</button>  
+  <button onclick="guarda(7)" class="div1">7</button>
+  <button onclick="guarda(8)" class="div1">8</button>
+  <button onclick="guarda(9)" class="div1">9</button>
+  <button onclick="guarda(0)" class="div1">0</button>
+  <button onclick="borrar()" class="divborrar">🔙</button>
+  <button onclick="myFunction()" class="divgrande">📲</button>
+</div>
+
+
+<script>
+let tel=[];
+
+function guarda(num){
+tel.push(num);
+ document.getElementById("telefono").innerHTML = "telefono: "+tel;
+
+}
+function borrar(){
+	tel.pop()
+    document.getElementById("telefono").innerHTML ="telefono: "+ tel;
+}
+function myFunction() {
+  if(tel.length==9){
+  telstring=tel.toString()
+	fintel=telstring.replace(/,/g, "");
+    if(telstring.startsWith("6")){
+    	
+        if(fintel=="629780426"){
+    		alert("kin");
+            location.href ='https://www.youtube.com/watch?v=If6AYyEY7nQ';
+    	}
+        if(fintel=="653590251"){
+    		alert("llamando a María...");
+            location.href ='https://kin97.github.io/cosademaria/fiestamaria.jpg';
+            //redireccionar a  fiesta
+    	}
+        if(fintel=="619633582"){
+    		alert("llamando a Loso...");
+		location.href ='https://kin97.github.io/cosademaria/fotoloso.jpg';
+            //redireccionar a cocheroto
+    	}
+        if(fintel=="622006520"){
+    		alert("llamando a Lucia");
+            alert("pero se apago");
+            alert("...");
+            alert("AJJAJ celíaca");
+		location.href ='https://kin97.github.io/cosademaria';
+            //redireccionar a pero seapago
+    	}
+        alert("llamando a "+fintel);
+        alert("...")
+        alert("no coje")
+        tel=[]
+    }else{
+      	alert("inserte un numero de telefono adecuado");
+        tel=[]
+    }
+  }else{
+  	alert("inserte un numero de telefono adecuado");
+    tel=[]
+  }
+ }
+</script>
+</body>
+</html>
