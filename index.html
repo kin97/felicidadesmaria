@@ -74,33 +74,38 @@ function myFunction() {
   telstring=tel.toString()
 	fintel=telstring.replace(/,/g, "");
     if(telstring.startsWith("6")){
-    	
-        if(fintel=="629780426"){
-    		alert("kin");
+    switch(fintel){
+      case "629780426":
+            alert(" llamando a kin");
             location.href ='https://www.youtube.com/watch?v=If6AYyEY7nQ';
-    	}
-        if(fintel=="653590251"){
-    		alert("llamando a María...");
-            location.href ='https://kin97.github.io/felicidadesmaria/fiestamaria.jpg';
-            //redireccionar a  fiesta
-    	}
-        if(fintel=="619633582"){
-    		alert("llamando a Loso...");
-		location.href ='https://kin97.github.io/felicidadesmaria/loso.jpg';
-            //redireccionar a cocheroto
-    	}
-        if(fintel=="622006520"){
-    		alert("llamando a Lucia");
+            tel=[]
+      break;
+      case "653590251": 
+      alert("Llamando a María")
+      location.href ='https://kin97.github.io/felicidadesmaria/fiestamaria.jpg';
+      tel=[]
+      break;
+      case "619633582": 
+      alert("llamando a Loso...");
+      location.href ='https://kin97.github.io/felicidadesmaria/loso.jpg';
+      tel=[]
+      break;
+      case "622006520": 
+      alert("llamando a Lucia");
             alert("pero se apago");
             alert("...");
             alert("AJJAJ celíaca");
-		location.href ='https://kin97.github.io/felicidadesmaria/lucia.jpg';
-            //redireccionar a pero seapago
-    	}
-        alert("llamando a "+fintel);
+            location.href ='https://kin97.github.io/felicidadesmaria/lucia.jpg';      
+            tel=[]
+            break;
+      default:
+      alert("llamando a "+fintel);
         alert("...")
         alert("no coje")
         tel=[]
+      break;
+    }
+    	
     }else{
       	alert("inserte un numero de telefono adecuado");
         tel=[]
